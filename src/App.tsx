@@ -1055,13 +1055,19 @@ function App() {
                 </div>
               </div>
 
-              <form className="glass rounded-[1.6rem] p-5 shadow-sm">
+              <form
+                action="https://formspree.io/f/mpqbaqpj"
+                method="POST"
+                className="glass rounded-[1.6rem] p-5 shadow-sm"
+              >
                 <div className="grid gap-4 md:grid-cols-2">
                   <label className="block text-sm text-slate-300">
                     Name
                     <input
                       type="text"
+                      name="name"
                       placeholder="Your name"
+                      required
                       className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none placeholder:text-slate-500"
                     />
                   </label>
@@ -1070,7 +1076,9 @@ function App() {
                     Work Email
                     <input
                       type="email"
+                      name="email"
                       placeholder="you@company.com"
+                      required
                       className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none placeholder:text-slate-500"
                     />
                   </label>
@@ -1079,6 +1087,7 @@ function App() {
                     Company
                     <input
                       type="text"
+                      name="company"
                       placeholder="Business name"
                       className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none placeholder:text-slate-500"
                     />
@@ -1088,6 +1097,7 @@ function App() {
                     Team Size
                     <input
                       type="text"
+                      name="teamSize"
                       placeholder="e.g. 5-20"
                       className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none placeholder:text-slate-500"
                     />
@@ -1097,7 +1107,9 @@ function App() {
                     What should the agent handle first?
                     <textarea
                       rows={5}
+                      name="message"
                       placeholder="Tell us the bottleneck, what is happening now, and what you want the agent to take over."
+                      required
                       className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none placeholder:text-slate-500"
                     />
                   </label>
