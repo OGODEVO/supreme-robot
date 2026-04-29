@@ -1,10 +1,17 @@
 const axios = require('axios');
-const config = require('./meta-config');
+
+// Load environment variables
+require('dotenv').config();
 
 const BASE_URL = 'https://graph.facebook.com/v20.0';
-const TOKEN = config.accessToken;
-const AD_ACCOUNT_ID = config.adAccountId;
-const LANDING_PAGE = config.landingPageUrl;
+const TOKEN = process.env.META_ACCESS_TOKEN;
+const AD_ACCOUNT_ID = process.env.META_AD_ACCOUNT_ID;
+const LANDING_PAGE = process.env.LANDING_PAGE_URL || 'https://agentrealm.org';
+
+if (!TOKEN || !AD_ACCOUNT_ID) {
+  console.error('❌ Missing META_ACCESS_TOKEN or META_AD_ACCOUNT_ID in .env file.');
+  process.exit(1);
+}
 
 const audiences = {
   business: {
