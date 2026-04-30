@@ -1138,10 +1138,41 @@ function App() {
         </motion.section>
       </main>
 
-      <footer className="border-t border-white/10 py-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 text-center text-sm text-slate-400 md:flex-row md:text-left">
-          <p>agent-realm - Agent-as-a-Service for high-performance business workflows.</p>
-          <p>Copyright {new Date().getFullYear()} agent-realm. All rights reserved.</p>
+      <footer className="border-t border-white/10 bg-black/20 py-10">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 text-sm text-slate-400 md:grid-cols-[1.3fr_1fr_1fr] md:items-start">
+          <div className="space-y-3 text-center md:text-left">
+            <p className="font-display text-lg font-semibold tracking-tight text-white">agent-realm</p>
+            <p className="max-w-md leading-6 text-slate-300">
+              Agent-as-a-Service for people and teams with real workflows to run.
+            </p>
+          </div>
+
+          <div className="space-y-3 text-center md:text-left">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Contact</p>
+            <a
+              href="mailto:contact@agentrealm.org"
+              className="inline-flex text-slate-200 transition hover:text-white"
+            >
+              contact@agentrealm.org
+            </a>
+            <p>Social channels coming soon.</p>
+          </div>
+
+          <div className="space-y-3 text-center md:text-left">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Legal</p>
+            <div className="flex flex-col gap-2">
+              <a href="/privacy.html" className="text-slate-200 transition hover:text-white">
+                Privacy Policy
+              </a>
+              <a href="/terms.html" className="text-slate-200 transition hover:text-white">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-8 max-w-7xl border-t border-white/10 px-6 pt-5 text-center text-xs text-slate-500 md:text-left">
+          Copyright {new Date().getFullYear()} agent-realm. All rights reserved.
         </div>
       </footer>
     </div>
