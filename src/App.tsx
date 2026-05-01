@@ -1059,6 +1059,13 @@ function App() {
                 action="https://formspree.io/f/mpqbaqpj"
                 method="POST"
                 className="glass rounded-[1.6rem] p-5 shadow-sm"
+                onSubmit={() => {
+                  // @ts-ignore
+                  if (typeof window !== 'undefined' && window.fbq) {
+                    // @ts-ignore
+                    window.fbq('track', 'Lead');
+                  }
+                }}
               >
                 <div className="grid gap-4 md:grid-cols-2">
                   <label className="block text-sm text-slate-300">
